@@ -2,11 +2,11 @@
 using Dapper;
 using MassTransit;
 using Microsoft.Data.SqlClient;
-using OrderCreatedEventHandlerService.Entities;
+using OrderOutboxTableConsumerService.Entities;
 using Quartz;
 using Shared.Events;
 
-namespace OrderCreatedEventHandlerService.Jobs
+namespace OrderOutboxTableConsumerService.Jobs
 {
     public class OrderCreatedEventPublishJob : IJob
     {
@@ -51,3 +51,4 @@ namespace OrderCreatedEventHandlerService.Jobs
         }
     }
 }
+

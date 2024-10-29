@@ -4,24 +4,23 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>dotnet-OrderInboxTableSaverService-5b7213ee-b273-4eb4-8b02-5dccd00ce3ec</UserSecretsId>
+    <UserSecretsId>dotnet-OrderInboxTableConsumerService-927503ad-1485-4765-bcc7-f30d812dbc01</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+    <PackageReference Include="Quartz.Extensions.Hosting" Version="3.13.0" />
+    <PackageReference Include="Quartz.Extensions.DependencyInjection" Version="3.13.0" />
+    <PackageReference Include="Quartz" Version="3.13.0" />
     <PackageReference Include="Dapper" Version="2.1.35" />
-    <PackageReference Include="MassTransit.RabbitMQ" Version="8.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Consumers\" />
+    <None Remove="Jobs\" />
+    <None Remove="Entities\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Consumers\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Shared\Shared.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
+    <Folder Include="Jobs\" />
+    <Folder Include="Entities\" />
   </ItemGroup>
 </Project>

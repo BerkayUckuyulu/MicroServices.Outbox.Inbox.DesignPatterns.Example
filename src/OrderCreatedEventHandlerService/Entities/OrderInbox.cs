@@ -1,6 +1,6 @@
 ﻿namespace OrderCreatedEventHandlerService.Entities
 {
-    public class OrderOutbox
+    public class OrderInbox
     {
         public Guid IdempotentToken { get; set; }
         public DateTime CreatedDate { get; set; }
@@ -9,4 +9,3 @@
         public string Payload { get; set; }
     }
 }
-

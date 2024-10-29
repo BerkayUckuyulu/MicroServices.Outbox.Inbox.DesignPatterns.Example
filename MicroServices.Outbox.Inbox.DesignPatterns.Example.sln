@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderOutboxTableConsumerSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderCreatedEventHandlerService", "src\OrderCreatedEventHandlerService\OrderCreatedEventHandlerService.csproj", "{A67456F4-CD8F-4E94-9AFB-07ACFE610E99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderInboxTableSaverService", "src\OrderInboxTableSaverService\OrderInboxTableSaverService.csproj", "{837E6829-B7DD-4800-BD10-FB31442F3629}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderInboxTableConsumerService", "src\OrderInboxTableConsumerService\OrderInboxTableConsumerService.csproj", "{348AE389-23D4-491D-A68F-EAA9E9C05376}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,9 +38,9 @@ Global
 		{A67456F4-CD8F-4E94-9AFB-07ACFE610E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A67456F4-CD8F-4E94-9AFB-07ACFE610E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A67456F4-CD8F-4E94-9AFB-07ACFE610E99}.Release|Any CPU.Build.0 = Release|Any CPU
-		{837E6829-B7DD-4800-BD10-FB31442F3629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{837E6829-B7DD-4800-BD10-FB31442F3629}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{837E6829-B7DD-4800-BD10-FB31442F3629}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{837E6829-B7DD-4800-BD10-FB31442F3629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{348AE389-23D4-491D-A68F-EAA9E9C05376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{348AE389-23D4-491D-A68F-EAA9E9C05376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{348AE389-23D4-491D-A68F-EAA9E9C05376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{348AE389-23D4-491D-A68F-EAA9E9C05376}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,11 +1,12 @@
 ﻿using MassTransit;
-using OrderCreatedEventHandlerService.Jobs;
-using Quartz;
+using OrderCreatedEventHandlerService.Consumers;
+using Shared.Constants;
 
 var builder = Host.CreateApplicationBuilder(args);
 
 builder.Services.AddMassTransit(configurator =>
 {
+    configurator.AddConsumer<OrderCreatedEventConsumer>();
     configurator.UsingRabbitMq((context, _configure) =>
     {
         _configure.Host(builder.Configuration["RabbitMQ:Host"], h =>
@@ -13,25 +14,9 @@ builder.Services.AddMassTransit(configurator =>
             h.Username(builder.Configuration["RabbitMQ:UserName"]!);
             h.Password(builder.Configuration["RabbitMQ:Password"]!);
         });
+        _configure.ReceiveEndpoint(RabbitMQQueueNames.Stock_OrderCreatedEventQueue, e => e.ConfigureConsumer<OrderCreatedEventConsumer>(context));
     });
 });
 
-builder.Services.AddQuartz(configurator =>
-{
-    JobKey jobKey = new("OrderCreatedEventPublishJob");
-    configurator.AddJob<OrderCreatedEventPublishJob>(options => options.WithIdentity(jobKey));
-
-    TriggerKey triggerKey = new("OrderCreatedEventPublishTrigger");
-    configurator.AddTrigger(options => options.ForJob(jobKey)
-    .WithIdentity(triggerKey)
-    .StartAt(DateTime.UtcNow)
-    .WithSimpleSchedule(builder => builder
-        .WithIntervalInSeconds(15)
-        .RepeatForever()));
-});
-
-builder.Services.AddQuartzHostedService(options => options.WaitForJobsToComplete = true);
-
 var host = builder.Build();
 host.Run();
-
