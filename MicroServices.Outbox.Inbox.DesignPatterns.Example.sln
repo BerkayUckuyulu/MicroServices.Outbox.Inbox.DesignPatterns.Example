@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.API", "src\Order.API\Order.API.csproj", "{127AA7D4-C90D-4F6E-B1CD-AE49EA3AF08F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "src\Shared\Shared.csproj", "{19F0C189-8967-4C63-BE6C-74B3E3767C93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderOutboxTableConsumerService", "src\OrderOutboxTableConsumerService\OrderOutboxTableConsumerService.csproj", "{256EABE1-02A0-4002-AB6C-52159BC387D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderCreatedEventHandlerService", "src\OrderCreatedEventHandlerService\OrderCreatedEventHandlerService.csproj", "{A67456F4-CD8F-4E94-9AFB-07ACFE610E99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderInboxTableSaverService", "src\OrderInboxTableSaverService\OrderInboxTableSaverService.csproj", "{837E6829-B7DD-4800-BD10-FB31442F3629}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{127AA7D4-C90D-4F6E-B1CD-AE49EA3AF08F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{127AA7D4-C90D-4F6E-B1CD-AE49EA3AF08F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{127AA7D4-C90D-4F6E-B1CD-AE49EA3AF08F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{127AA7D4-C90D-4F6E-B1CD-AE49EA3AF08F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F0C189-8967-4C63-BE6C-74B3E3767C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F0C189-8967-4C63-BE6C-74B3E3767C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F0C189-8967-4C63-BE6C-74B3E3767C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F0C189-8967-4C63-BE6C-74B3E3767C93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{256EABE1-02A0-4002-AB6C-52159BC387D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{256EABE1-02A0-4002-AB6C-52159BC387D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{256EABE1-02A0-4002-AB6C-52159BC387D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{256EABE1-02A0-4002-AB6C-52159BC387D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A67456F4-CD8F-4E94-9AFB-07ACFE610E99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A67456F4-CD8F-4E94-9AFB-07ACFE610E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A67456F4-CD8F-4E94-9AFB-07ACFE610E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A67456F4-CD8F-4E94-9AFB-07ACFE610E99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{837E6829-B7DD-4800-BD10-FB31442F3629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{837E6829-B7DD-4800-BD10-FB31442F3629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{837E6829-B7DD-4800-BD10-FB31442F3629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{837E6829-B7DD-4800-BD10-FB31442F3629}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
